@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        function getResult(firstValue, secondValue, workSymbol) {
+            switch (workSymbol) {
+                case "+":
+                    return firstValue + secondValue;
+                case "**":
+                    return firstValue ** secondValue;
+                case "/":
+                    return firstValue / secondValue;
+                case "-":
+                    return firstValue - secondValue;
+                case "*":
+                    return firstValue * secondValue;
+                default:
+                    return "Unknown operator!"
+            }
+
+        }
+        getResult(3, 3, "*");
+
+        function isCharPresent(userString, userSymbol, searchSymbol) {
+            for (var i = searchSymbol; i < userString.length; i++) {
+                if (userString[i] === userSymbol) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        console.log(isCharPresent("Hello World", "W", 7));
+
+        function charIndexOf(userString, userSymbol, searchSymbol) {
+            for (var i = searchSymbol; i < userString.length; i++) {
+                if (userString[i] === userSymbol) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        charIndexOf("Hello World", "e", 0);
+
+    </script>
+</body>
+
+</html>
